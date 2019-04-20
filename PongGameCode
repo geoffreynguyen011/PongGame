@@ -595,8 +595,6 @@ TimerOn();
 
 unsigned short i; // Scheduler for-loop iterator
 while(1) {
-	//PORTB = platform2;// & ballLocationB;
-	//PORTA = platform1 | ballLocationA;
 	// Scheduler code
 	for ( i = 0; i < numTasks; i++ ) {
 		// Task is ready to tick
