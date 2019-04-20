@@ -246,7 +246,6 @@ int SMTick2(int state) {							//transitions
 		else {
 			Ballstate = BallWait;
 		}
-//		Ballstate = BallMoveDown;
 		break;
 		
 		case BallRelease:
@@ -350,8 +349,6 @@ enum LED_States { LEDstart, LEDwait, LEDdisplay, LEDbpush, LEDbrelease  } LEDsta
 int Player1(int state) {
 	// Local Variables
 	//State machine transitions
-//unsigned char platform1 = 0x01; // sets the pattern displayed on columns
-//unsigned short platform2 = 0xFFC7; // grounds column to display pattern
 
 // === Transitions ===
 switch (LEDstate) {
@@ -366,7 +363,6 @@ switch (LEDstate) {
 	else {
 		LEDstate = LEDwait;
 	}
-	//state = LEDdisplay;
 	break;
 	
 	case LEDdisplay:
@@ -405,8 +401,6 @@ switch (LEDstate) {
 // === Actions ===
 switch (LEDstate) {
 	case LEDstart:
-//	PORTA = platform1;
-//	PORTB = platform2;
 	break;
 	
 	case LEDwait:
@@ -425,8 +419,6 @@ switch (LEDstate) {
 	break;
 }
 
-//PORTB = platform2;
-//PORTA = platform1;
 
 
 return LEDstate;
@@ -485,8 +477,6 @@ switch (P2state) {
 // === Actions ===
 switch (P2state) {
 	case P2start:
-	//	PORTA = platform1;
-	//	PORTB = platform2;
 	break;
 	
 	case P2wait:
@@ -505,8 +495,6 @@ switch (P2state) {
 	break;
 }
 
-//PORTB = platform2;
-//PORTA = platform1;
 
 
 return P2state;
